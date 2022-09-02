@@ -19,14 +19,7 @@ const AllCards = (props) => {
       <Title>{props.title}</Title>
       <Container>
         {items.map((item) => (
-          <Card
-            key={item.id}
-            brand={item.brand}
-            model={item.model}
-            quantity={item.inStock}
-            img={item.img}
-            price={item.price}
-          />
+          <Card {...item} key={item.id} />
         ))}
       </Container>
     </>
